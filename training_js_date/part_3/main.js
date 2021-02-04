@@ -1,3 +1,7 @@
+// Sélection id HTML
+
+let dateSpan = document.querySelector("#date");
+
 // Je récupère la date actuelle universelle
 
 let dateActuelle = new Date();
@@ -14,7 +18,11 @@ let dateLocale = dateActuelle.toLocaleString( /*'fr-FR'*/ navigator.language, {
     second: 'numeric'
 });
 
-console.log(dateLocale);
+// Injection de la date dans l'HTML
+
+dateSpan.textContent = dateLocale;
+
+// console.log(dateLocale);
 
 // Plusieurs méthodes sont disponibles
 
